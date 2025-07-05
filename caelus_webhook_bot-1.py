@@ -32,7 +32,7 @@ def webhook():
     return 'OK'
 
 # Set webhook when Flask starts
-@app.before_first_request
+@app.before_request
 def init_webhook():
     application.bot.set_webhook(url=WEBHOOK_URL)
 
